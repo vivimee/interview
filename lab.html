@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* #span {color: blue;}
+    #div span {color: red;}
+    #p span {color: green;} */
+    [data-name="haloSpan"] { color: orange; }
+    .span  { color: pink; }
+  </style>
+</head>
+<body>
+  <div id="div" class="div">
+    <p id="p" class="p">
+      <span id="span" class="span halo" data-name="haloSpan">halo</span>
+    </p>
+  </div>
+  <script>
+    let div = document.createElement('div');
+    let span = document.createElement('span');
+    span.innerText = 'halo';
+    div.appendChild(span);
+    document.body.appendChild(div);
+  </script>
+</body>
+</html>
